@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore Bangladesh — discover its beauty, history, heritage, culture, and vibrant rural life."
+    />
+    <title>Explore Bangladesh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header__inner">
+        <a class="brand" href="#top" aria-label="Explore Bangladesh home">
+          <span class="brand__mark" aria-hidden="true">
+            <span class="brand__mark-circle"></span>
+          </span>
+          <span class="brand__text">Explore Bangladesh</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+          <a href="index.html" class="is-current">Home</a>
+          <a href="divisions.html">Divisions</a>
+          <a href="culture.html">Culture</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top">
+        <div class="container hero__grid">
+          <div class="hero__content reveal">
+            <p class="eyebrow">Beauty, History & Heritage</p>
+            <h1>Bangladesh in every river, field, and story.</h1>
+            <p class="lead">
+              From the green delta fields and riverside villages to the historic
+              struggle for freedom, Bangladesh offers a living heritage shaped by
+              culture, resilience, and beauty.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#places">Explore places</a>
+              <a class="btn btn--secondary" href="#history">Understand our story</a>
+            </div>
+            <ul class="hero__stats" aria-label="Bangladesh highlights">
+              <li><strong>8</strong><span>Divisions</span></li>
+              <li><strong>64</strong><span>Districts</span></li>
+              <li><strong>1971</strong><span>Independence</span></li>
+            </ul>
+          </div>
+
+          <div class="hero__visual reveal" aria-label="Bangladesh landscape collage">
+            <div class="photo-card photo-card--large">
+              <img class="photo-card__image" src="image/home-sundarbans.png" alt="Sunset over a river in the Sundarbans with a boat and Bengal tiger" />
+              <div class="photo-card__content">
+                <span>Rural Bangladesh</span>
+                <h2>Fields, rivers, and warm community life</h2>
+              </div>
+            </div>
+            <div class="photo-card photo-card--small">
+              <img class="photo-card__image" src="image/home-martyrs-memorial.png" alt="National Martyrs' Memorial and the Bangladesh flag" />
+              <span>Listening to the river</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="villages">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Everyday Bangladesh</p>
+            <h2>Village life, seasons, and togetherness</h2>
+          </div>
+
+          <div class="chip-group reveal" aria-label="Village filters">
+            <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="chip" type="button" data-filter="fields" aria-pressed="false">Fields</button>
+            <button class="chip" type="button" data-filter="rivers" aria-pressed="false">Rivers</button>
+            <button class="chip" type="button" data-filter="festivals" aria-pressed="false">Festivals</button>
+            <button class="chip" type="button" data-filter="life" aria-pressed="false">Village life</button>
+          </div>
+
+          <div class="card-grid card-grid--three" data-card-grid>
+            <a class="card reveal culture-topic-card" data-category="fields" href="green-paddies.html">
+              <div class="card__media card__media--rice"></div>
+              <div class="card__body">
+                <p class="card__meta">Fields</p>
+                <h3>Green paddies</h3>
+                <p>Rice paddies shape rural landscapes and sustain families through three harvest seasons.</p>
+              </div>
+            </a>
+
+            <a class="card reveal culture-topic-card" data-category="rivers" href="boats-and-ferries.html">
+              <div class="card__media card__media--river"></div>
+              <div class="card__body">
+                <p class="card__meta">Rivers</p>
+                <h3>Boats and ferries</h3>
+                <p>Rivers are roads and lifelines, carrying boats, fish, and daily movement across the delta.</p>
+              </div>
+            </a>
+
+            <a class="card reveal culture-topic-card" data-category="festivals" href="nabanna-and-pitha.html">
+              <div class="card__media card__media--festival"></div>
+              <div class="card__body">
+                <p class="card__meta">Festivals</p>
+                <h3>Nabanna and pitha</h3>
+                <p>Harvest celebrations bring families together with food, music, and joyful community traditions.</p>
+              </div>
+            </a>
+
+            <a class="card reveal culture-topic-card" data-category="life" href="village-life.html">
+              <div class="card__media card__media--home"></div>
+              <div class="card__body">
+                <p class="card__meta">Village life</p>
+                <h3>Homes built for community</h3>
+                <p>Courtyards, ponds, and shared meals define the rhythm of daily life in village Bangladesh.</p>
+              </div>
+            </a>
+
+            <a class="card reveal culture-topic-card" data-category="fields" href="jute-and-labor.html">
+              <div class="card__media card__media--jute"></div>
+              <div class="card__body">
+                <p class="card__meta">Farm work</p>
+                <h3>Jute and labor</h3>
+                <p>Fields hum with activity from planting to harvest, where hand work and seasonal timing matter.</p>
+              </div>
+            </a>
+
+            <a class="card reveal culture-topic-card" data-category="festivals" href="boishakhi-fairs.html">
+              <div class="card__media card__media--mela"></div>
+              <div class="card__body">
+                <p class="card__meta">Culture</p>
+                <h3>Boishakhi fairs</h3>
+                <p>Traditional fairs and seasonal gatherings bring color, song, and shared pride to the countryside.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="history">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">A proud history</p>
+            <h2>From the Language Movement to independence</h2>
+          </div>
+
+          <div class="timeline" aria-label="Historical timeline">
+            <a class="timeline__item reveal" href="language-movement.html" aria-label="Read the full story of the Language Movement">
+              <div class="timeline__date">1952</div>
+              <div class="timeline__content">
+                <h3>The Language Movement</h3>
+                <p>People protested for Bangla to be recognized as a state language and the movement became a lasting symbol of dignity and identity.</p>
+              </div>
+            </a>
+
+            <a class="timeline__item reveal" href="six-point-programme.html" aria-label="Read the full story of the Six-Point Programme">
+              <div class="timeline__date">1966</div>
+              <div class="timeline__content">
+                <h3>Six-Point Programme</h3>
+                <p>Demands for greater autonomy helped shape the political movement for self-rule and democratic rights.</p>
+              </div>
+            </a>
+
+            <a class="timeline__item reveal" href="independence-1971.html" aria-label="Read the full story of Bangladesh's independence in 1971">
+              <div class="timeline__date">1971</div>
+              <div class="timeline__content">
+                <h3>Independence</h3>
+                <p>After years of struggle and sacrifice, Bangladesh emerged as an independent nation on 16 December 1971.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="divisions">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Eight divisions</p>
+            <h2>One country with many landscapes</h2>
+          </div>
+
+          <div class="card-grid card-grid--four">
+            <a class="division-card reveal" href="dhaka.html" aria-label="Explore Dhaka division">
+              <h3>Dhaka</h3>
+              <p>Capital city, history, and culture.</p>
+              <span class="division-card__link">Explore division <span aria-hidden="true">→</span></span>
+            </a>
+            <a class="division-card reveal" href="chattogram.html" aria-label="Explore Chattogram division">
+              <h3>Chattogram</h3>
+              <p>Sea beaches, hills, and port life.</p>
+              <span class="division-card__link">Explore division <span aria-hidden="true">→</span></span>
+            </a>
+            <a class="division-card reveal" href="rajshahi.html" aria-label="Explore Rajshahi division">
+              <h3>Rajshahi</h3>
+              <p>Mangoes, heritage sites, and silk.</p>
+              <span class="division-card__link">Explore division <span aria-hidden="true">→</span></span>
+            </a>
+            <a class="division-card reveal" href="khulna.html" aria-label="Explore Khulna division">
+              <h3>Khulna</h3>
+              <p>Sundarbans and river-delta traditions.</p>
+              <span class="division-card__link">Explore division <span aria-hidden="true">→</span></span>
+            </a>
+            <a class="division-card reveal" href="barishal.html" aria-label="Explore Barishal division">
+              <h3>Barishal</h3>
+              <p>Canals, rivers, and coastal beauty.</p>
+              <span class="division-card__link">Explore division <span aria-hidden="true">→</span></span>
+            </a>
+            <a class="division-card reveal" href="sylhet.html" aria-label="Explore Sylhet division">
+              <h3>Sylhet</h3>
+              <p>Tea gardens, hills, and wetlands.</p>
+              <span class="division-card__link">Explore division <span aria-hidden="true">→</span></span>
+            </a>
+            <a class="division-card reveal" href="rangpur.html" aria-label="Explore Rangpur division">
+              <h3>Rangpur</h3>
+              <p>Agriculture, folklore, and northern heritage.</p>
+              <span class="division-card__link">Explore division <span aria-hidden="true">→</span></span>
+            </a>
+            <a class="division-card reveal" href="mymensingh.html" aria-label="Explore Mymensingh division">
+              <h3>Mymensingh</h3>
+              <p>River culture and folk traditions.</p>
+              <span class="division-card__link">Explore division <span aria-hidden="true">→</span></span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="culture">
+        <div class="container culture-grid">
+          <div class="culture-copy reveal">
+            <p class="eyebrow">Culture and heritage</p>
+            <h2>Language, food, art, and celebration</h2>
+            <p>
+              Bangla is the national language and a source of shared identity, while food,
+              folk music, and textile traditions reflect the everyday creativity of the people.
+            </p>
+            <ul class="check-list">
+              <li>Nakshi kantha embroidery</li>
+              <li>Pohela Boishakh and festive traditions</li>
+              <li>Baul music and folk storytelling</li>
+              <li>Traditional cuisine from every region</li>
+            </ul>
+          </div>
+
+          <div class="culture-tiles reveal" aria-label="Cultural highlights">
+            <article class="tile tile--food">
+              <span>Food Culture</span>
+            </article>
+            <article class="tile tile--music">
+              <span>Baul Music</span>
+            </article>
+            <article class="tile tile--textiles">
+              <span>Nakshi Kantha</span>
+            </article>
+            <article class="tile tile--new-year">
+              <span>Pohela Boishakh</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="places">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Famous places</p>
+            <h2>Places worth discovering</h2>
+          </div>
+
+          <div class="card-grid card-grid--four">
+            <article class="place-card reveal">
+              <div class="place-card__badge">UNESCO</div>
+              <h3>Sundarbans</h3>
+              <p>Largest mangrove forest and home to the Royal Bengal tiger.</p>
+            </article>
+            <article class="place-card reveal">
+              <h3>Cox's Bazar</h3>
+              <p>About 120 km of sandy shoreline and unforgettable sunsets.</p>
+            </article>
+            <article class="place-card reveal">
+              <h3>Srimangal</h3>
+              <p>Tea gardens and green hills that define Sylhet's landscape.</p>
+            </article>
+            <article class="place-card reveal">
+              <h3>Lalbagh Fort</h3>
+              <p>Mughal-era heritage in the heart of Old Dhaka.</p>
+            </article>
+            <article class="place-card reveal">
+              <div class="place-card__badge">UNESCO</div>
+              <h3>Somapura Mahavihara</h3>
+              <p>Ancient Buddhist monastery ruins at Paharpur.</p>
+            </article>
+            <article class="place-card reveal">
+              <div class="place-card__badge">UNESCO</div>
+              <h3>Sixty Dome Mosque</h3>
+              <p>15th-century architecture and a key landmark in Bagerhat.</p>
+            </article>
+            <article class="place-card reveal">
+              <h3>Sajek Valley</h3>
+              <p>Cloudy hill views and Indigenous communities in Rangamati.</p>
+            </article>
+            <article class="place-card reveal">
+              <h3>Kuakata</h3>
+              <p>A unique beach where sunrise and sunset can both be seen over the sea.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section quote-section">
+        <div class="container">
+          <blockquote class="tribute reveal">
+            “Our mission is to showcase the natural beauty, rural lifestyle, historical heritage, and cultural diversity of Bangladesh to people around the world.”
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-copy reveal">
+            <p class="eyebrow">Contact</p>
+            <h2>Let us help you discover Bangladesh</h2>
+            <p>
+              Planning a trip, preparing a lesson, or sharing a story? We would love to hear from you.
+            </p>
+            <div class="contact-items">
+              <p><strong>Email:</strong> hello@example.com</p>
+              <p><strong>Response time:</strong> We aim to reply within a few days.</p>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" novalidate>
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Subject
+              <select name="subject" required>
+                <option value="">Choose a subject</option>
+                <option>General question</option>
+                <option>Suggest a place</option>
+                <option>Report a correction</option>
+                <option>Collaboration</option>
+              </select>
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <label class="checkbox-field">
+              <input type="checkbox" name="consent" required />
+              <span>I agree that my message may be used to respond to me.</span>
+            </label>
+            <button class="btn btn--primary" type="submit">Send message</button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer__grid">
+        <div>
+          <h3>Explore Bangladesh</h3>
+          <p>Beauty, History & Heritage</p>
+        </div>
+        <div>
+          <h4>Visit</h4>
+          <ul>
+            <li><a href="#villages">Villages</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#divisions">Divisions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Culture</h4>
+          <ul>
+            <li><a href="#culture">Heritage</a></li>
+            <li><a href="#places">Places</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Mission</h4>
+          <p>Our mission is to showcase the natural beauty, rural lifestyle, historical heritage, and cultural diversity of Bangladesh to people around the world.</p>
+        </div>
+      </div>
+      <div class="container footer__bottom">
+        <p>© <span id="year"></span> Explore Bangladesh</p>
+      </div>
+    </footer>
+  </body>
+</html>
