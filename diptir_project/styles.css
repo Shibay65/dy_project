@@ -1362,6 +1362,79 @@ a.feature-block:focus-visible {
   color: var(--green-700);
 }
 
+.confirmation-dialog {
+  width: min(42rem, calc(100% - 2rem));
+  max-width: none;
+  max-height: min(90vh, 52rem);
+  padding: 0;
+  overflow: auto;
+  color: var(--ink-900);
+  background: var(--sand-100);
+  border: 0;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-2);
+}
+
+.confirmation-dialog::backdrop {
+  background: rgba(0, 35, 29, 0.78);
+  backdrop-filter: blur(4px);
+}
+
+.confirmation-content {
+  padding: clamp(1.5rem, 5vw, 2.75rem);
+}
+
+.confirmation-content h2 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+.confirmation-success {
+  margin-bottom: 1.5rem;
+  color: var(--green-700);
+  font-weight: 700;
+}
+
+.confirmation-details {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--stone-200);
+  border-radius: var(--radius-md);
+}
+
+.confirmation-details__row {
+  display: grid;
+  grid-template-columns: minmax(5rem, 0.28fr) minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+}
+
+.confirmation-details__row + .confirmation-details__row {
+  border-top: 1px solid var(--stone-200);
+}
+
+.confirmation-details dt {
+  color: var(--ink-500);
+  font-weight: 700;
+}
+
+.confirmation-details dd {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.confirmation-countdown {
+  margin: 1.5rem 0 0;
+  color: var(--ink-700);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+}
+
 .site-footer {
   background: var(--green-900);
   color: var(--white);
@@ -1473,6 +1546,11 @@ a.feature-block:focus-visible {
 }
 
 @media (max-width: 767px) {
+  .confirmation-details__row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
   .hero__stats {
     gap: 1.1rem 2rem;
   }
@@ -1518,13 +1596,74 @@ a.feature-block:focus-visible {
   display: block;
   min-height: 15rem;
   color: inherit;
+  position: relative;
+  isolation: isolate;
+}
+
+.division-page-grid .division-card::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+  transition: transform 0.5s var(--ease);
+}
+
+.division-page-grid .division-card:nth-child(1)::before {
+  background-image: linear-gradient(to top, rgba(0, 35, 29, 0.9), rgba(0, 35, 29, 0.5) 52%, rgba(0, 0, 0, 0.08)), url("image/dhaka-ahsan-manzil.png");
+}
+
+.division-page-grid .division-card:nth-child(2)::before {
+  background-image: linear-gradient(to top, rgba(0, 35, 29, 0.9), rgba(0, 35, 29, 0.5) 52%, rgba(0, 0, 0, 0.08)), url("image/chattogram-coxs-bazar.png");
+}
+
+.division-page-grid .division-card:nth-child(3)::before {
+  background-image: linear-gradient(to top, rgba(0, 35, 29, 0.9), rgba(0, 35, 29, 0.5) 52%, rgba(0, 0, 0, 0.08)), url("image/rajshahi-paharpur-aerial.png");
+}
+
+.division-page-grid .division-card:nth-child(4)::before {
+  background-image: linear-gradient(to top, rgba(0, 35, 29, 0.9), rgba(0, 35, 29, 0.5) 52%, rgba(0, 0, 0, 0.08)), url("image/home-sundarbans.png");
+}
+
+.division-page-grid .division-card:nth-child(5)::before {
+  background-image: linear-gradient(to top, rgba(0, 35, 29, 0.9), rgba(0, 35, 29, 0.5) 52%, rgba(0, 0, 0, 0.08)), url("image/barishal-floating-guava-market.png");
+}
+
+.division-page-grid .division-card:nth-child(6)::before {
+  background-image: linear-gradient(to top, rgba(0, 35, 29, 0.9), rgba(0, 35, 29, 0.5) 52%, rgba(0, 0, 0, 0.08)), url("image/sylhet-jaflong-hills.png");
+}
+
+.division-page-grid .division-card:nth-child(7)::before {
+  background-image: linear-gradient(to top, rgba(0, 35, 29, 0.9), rgba(0, 35, 29, 0.5) 52%, rgba(0, 0, 0, 0.08)), url("image/rangpur-kantajew-temple.png");
+}
+
+.division-page-grid .division-card:nth-child(8)::before {
+  background-image: linear-gradient(to top, rgba(0, 35, 29, 0.9), rgba(0, 35, 29, 0.5) 52%, rgba(0, 0, 0, 0.08)), url("image/mymensingh-brahmaputra-riverfront.png");
+}
+
+.division-page-grid .division-card > * {
+  position: relative;
+}
+
+.division-page-grid .division-card:hover::before,
+.division-page-grid .division-card:focus-visible::before {
+  transform: scale(1.06);
 }
 
 .division-summary {
   margin: 0 0 1rem;
-  color: var(--ink-700);
+  color: rgba(255, 255, 255, 0.92);
   font-size: 0.94rem;
-  line-height: 1.55;
+  line-height: 1.65;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.division-page-grid .division-card h3 {
+  color: var(--white);
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 .division-card__link {
@@ -1532,8 +1671,9 @@ a.feature-block:focus-visible {
   align-items: center;
   gap: 0.45rem;
   margin-top: 0.35rem;
-  color: var(--green-700);
+  color: var(--white);
   font-weight: 700;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
 }
 
 .division-card__link span {
